@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var status = 0;
+            $(".b1").click(function() {
+                if (status == 0) {
+                    $("#imagenes").fadeOut();
+                    status = 1;
+                } else {
+                    $("#imagenes").fadeIn(5000);
+                    status = 0;
+                }
+            });
+            $(".b2").click(function() {
+                $("#imagenes").fadeTo(5000, 0.5);
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <h2>This is a heading</h2>
+    <ivan>Ivan Azamar</ivan>
+    <div id="imagenes">
+        <img src="descarga3.jpeg" width="200" height="200">
+        <img src="desercion.jpg" width="200" height="200">
+    </div>
+    <button class="b1">Click me to hide paragraphs</button>
+    <button class="b2">Click me to show paragraphs</button>
+
+</body>
+
+</html>
